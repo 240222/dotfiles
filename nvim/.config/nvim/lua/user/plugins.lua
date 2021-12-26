@@ -33,10 +33,12 @@ packer.init {
 
 -- Install plugins 
 return require('packer').startup(function(use)
-  -- My plugins here
+
+  -- Put your plugins here: 
   use 'wbthomason/packer.nvim' 
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
