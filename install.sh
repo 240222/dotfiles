@@ -4,6 +4,7 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sude -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential 
+sudo apt-get install -y tree
 
 # Set local LC_ALL to counteract locale issue with perl
 export LC_ALL=C.UTF-8
