@@ -46,14 +46,17 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-nvim-lsp'
-
   -- Snippets
   use 'L3MON4D3/Luasnip'
   use 'rafamadriz/friendly-snippets'
-
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer' -- easy way to install lsp servers
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { { 'nvim-lua/plenary.nvim' }}
+  }
 
   -- Support for Vim icons
   use 'ryanoasis/vim-devicons'
