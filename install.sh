@@ -10,10 +10,10 @@ sudo apt-get install -y tree
 export LC_ALL=C.UTF-8
 
 # Install fd needed for Telescope in neovim
-sudo apt install fd-find
+sudo apt-get install -y fd-find
 
 # Install xsel
-sudo apt install xsel
+sudo apt-get install -y xsel
 
 # Install prettier, and other npm packages globally for JavaScript development
 sudo npm install -g typescript typescript-language-server eslint_d eslint prettier tree-sitter
@@ -59,3 +59,6 @@ antibody bundle <~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+
+# install fonts
+sudo apt-get install -y fonts-hack-ttf
