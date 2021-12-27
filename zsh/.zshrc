@@ -21,7 +21,7 @@ alias yt-dlp='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 alias kitty='~/.local/kitty.app/bin/kitty'
 
 # nix
-if [ -e /home/hacker/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hacker/.nix-profile/etc/profile.d/nix.sh; fi 
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
