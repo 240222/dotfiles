@@ -45,13 +45,17 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/cmp-nvim-lsp'
 
   -- Snippets
   use 'L3MON4D3/Luasnip'
   use 'rafamadriz/friendly-snippets'
 
   -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer' -- easy way to install lsp servers
 
+  -- Support for Vim icons
   use 'ryanoasis/vim-devicons'
 
   -- Automatically set up your configuration after cloning packer.nvim
