@@ -3,7 +3,6 @@ local install_path = fn.stdpath('data')..'~/.local/share/nvim/site/pack/packer/s
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
-
 return require('packer').startup(function(use)
 
 -- Start Plugins -- 
@@ -27,6 +26,8 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 -- End Packages --
 
   if packer_bootstrap then
