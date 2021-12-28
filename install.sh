@@ -18,6 +18,10 @@ sudo apt-get install -y xsel
 # Install prettier, and other npm packages globally for JavaScript development
 sudo npm install -g typescript typescript-language-server eslint_d eslint prettier tree-sitter
 
+# Install the nvim package manager packer nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 # Install nix
 curl -L https://nixos.org/nix/install | sh
 
@@ -29,7 +33,6 @@ nix-env -iA \
     nixpkgs.zsh \
     nixpkgs.git \
     nixpkgs.antibody \
-    nixpkgs.neovim \
     nixpkgs.stow \
     nixpkgs.fzf \
     nixpkgs.bat \
@@ -42,7 +45,7 @@ nix-env -iA \
 # create symlinks to the dotfiles with stow
 stow zsh
 stow git
-stow nvim
+stow nvim 
 stow kitty
 
 # add zsh to valid login shells
@@ -65,3 +68,13 @@ sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x2
 
 # install fonts with support for glyphs
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+
+# install latest neovim
+cd ~/.local/bin
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+
+# install packer for neovim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+

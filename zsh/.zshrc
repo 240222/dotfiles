@@ -15,8 +15,9 @@ source ~/.zsh_plugins.sh
 
 # aliases
 alias ls='ls -al'
-alias vim='nvim'
-alias vi='nvim'
+alias vim='~/.local/bin/nvim.appimage'
+alias vi='~/.local/bin/nvim.appimage'
+alias nvim='~/.local/bin/nvim.appimage'
 alias yt-dlp='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 alias kitty='~/.local/kitty.app/bin/kitty'
 

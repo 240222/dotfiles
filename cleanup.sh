@@ -4,3 +4,4 @@ rm ~/.zsh*
 rm ~/.p10k*
 rm ~/.git*
 rm -rf ~/.local/kitty*
+rm -rf ~/.config/nvim
