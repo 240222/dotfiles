@@ -36,3 +36,10 @@ keymap('v', '<a-k>', ":m '<-2<CR>gv=gv", opts)
 -- Move text up and down (in insert mode)
 keymap('i', '<a-j>', '<ESC>:m .+1<CR>==gi', opts)
 keymap('i', '<a-k>', '<ESC>:m .-2<CR>==gi', opts)
+
+-- Nvim Tree Explorer (in normal mode)
+keymap('n', '<c-n>', ':NvimTreeToggle<CR>', opts)
+-- todo: define a leader because the leader r doesn't work
+keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
+keymap('n', '<leader>n', ':NvimTreeFindFile<CR>', opts)
+
