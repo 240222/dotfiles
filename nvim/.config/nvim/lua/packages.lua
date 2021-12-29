@@ -36,6 +36,12 @@ return require('packer').startup(function(use)
     config = function() require'nvim-tree'.setup {} end
   }
 
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+    }
 -- End Packages --
 
   if packer_bootstrap then
