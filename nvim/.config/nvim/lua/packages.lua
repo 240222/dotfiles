@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
           startify.button('v', 'nvim config', ':e ~/.config/nvim/init.lua<cr>'),
           startify.button('q', 'quit nvim', ':qa<cr>'),
         }
-        vim.api.nvim_set_keymap('n', '<c-n>', ':Alpha<cr>', { noremap = true })
       end
   }
   use {
