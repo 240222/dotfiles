@@ -42,6 +42,8 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
     }
+
+    use 'Pocco81/TrueZen.nvim'
 -- End Packages --
 
   if packer_bootstrap then
