@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'}}
     }
+    use 'jose-elias-alvarez/null-ls.nvim'
 -- End Packages --
 
   if packer_bootstrap then
