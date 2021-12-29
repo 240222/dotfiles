@@ -56,6 +56,10 @@ return require('packer').startup(function(use)
       'yamatsum/nvim-nonicons',
       requires = {'kyazdani42/nvim-web-devicons'}
     }
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'}}
+    }
 -- End Packages --
 
   if packer_bootstrap then

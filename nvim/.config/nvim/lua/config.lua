@@ -1,3 +1,4 @@
+-- Map leader to space
 local options = {
   expandtab = true,
   shiftwidth = 2,

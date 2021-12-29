@@ -1,3 +1,5 @@
+-- The mapleader needs to be defined first
+vim.g.mapleader = ' '
 -- Keybindings
 local keymap = vim.api.nvim_set_keymap
 keymap('n', '<c-s>', ':w<CR>', {})
@@ -52,3 +54,10 @@ keymap('n', '<c-right>', ':vertical resize +2<CR>', opts)
 -- Launch the FTerm
 keymap('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
 keymap('t', '<A-i>', '<C-//><C-n><CMD>Lua require("FTerm").toggle()<CR>', opts)
+
+-- Telescope
+keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
+keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts)
+keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
+keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
+
