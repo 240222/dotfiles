@@ -12,6 +12,7 @@ local function nkeymap(key,map)
   keymap('n',key,map,opts)
 end
 
+-- LSP keybindings
 nkeymap('gd', ':lua vim.lsp.buf.definition()<cr>')
 nkeymap('gD', ':lua vim.lsp.buf.declaration()<cr>')
 nkeymap('gi', ':lua vim.lsp.buf.implementation()<cr>')
@@ -23,3 +24,7 @@ nkeymap('K', ':lua vim.lsp.buf.hover()<cr>')
 nkeymap('<c-k>', ':lua vim.lsp.buf.signature_help()<cr>')
 nkeymap('<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
 nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
+
+-- Move text up and down (in normal mode)
+keymap('n', '<a-j>', ':m .+1<CR>==', opts)
+keymap('n', '<a-k>', ':m .-2<CR>==', opts)
