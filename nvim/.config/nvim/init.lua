@@ -1,20 +1,7 @@
 require('packages')
 require('config')
 require('keybindings')
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  sync_install = false,
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true,
-  }
-}
-
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+require('treesitter')
 
 local lsp_installer = require('nvim-lsp-installer')
 lsp_installer.on_server_ready(function(server)

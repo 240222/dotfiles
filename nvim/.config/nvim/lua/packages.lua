@@ -5,7 +5,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 return require('packer').startup(function(use)
 
--- Start Plugins -- 
+-- Start Plugins --
   use 'wbthomason/packer.nvim'
   use 'tomasr/molokai'
   use {
@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   }
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+
 -- End Packages --
 
   if packer_bootstrap then
