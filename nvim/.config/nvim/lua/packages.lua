@@ -7,7 +7,9 @@ return require('packer').startup(function(use)
 
 -- Start Plugins --
   use 'wbthomason/packer.nvim'
-  use 'tomasr/molokai'
+  -- use 'tomasr/molokai'
+  use 'folke/tokyonight.nvim'
+
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -49,6 +51,9 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = {'kyazdani42/nvim-web-devicons', opt= true}
     }
+    
+    use 'numToStr/FTerm.nvim'
+
 -- End Packages --
 
   if packer_bootstrap then

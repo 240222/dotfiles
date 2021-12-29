@@ -49,3 +49,6 @@ keymap('n', '<c-down>', ':resize +2<CR>', opts)
 keymap('n', '<c-left>', ':vertical resize -2<CR>', opts)
 keymap('n', '<c-right>', ':vertical resize +2<CR>', opts)
 
+-- Launch the FTerm
+keymap('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap('t', '<A-i>', '<C-//><C-n><CMD>Lua require("FTerm").toggle()<CR>', opts)
