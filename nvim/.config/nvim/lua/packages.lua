@@ -51,9 +51,11 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = {'kyazdani42/nvim-web-devicons', opt= true}
     }
-    
     use 'numToStr/FTerm.nvim'
-
+    use {
+      'yamatsum/nvim-nonicons',
+      requires = {'kyazdani42/nvim-web-devicons'}
+    }
 -- End Packages --
 
   if packer_bootstrap then
