@@ -28,3 +28,8 @@ nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 -- Move text up and down (in normal mode)
 keymap('n', '<a-j>', ':m .+1<CR>==', opts)
 keymap('n', '<a-k>', ':m .-2<CR>==', opts)
+
+-- Move text up and down (in visual mode)
+-- todo: needs checking
+keymap('v', '<a-j>', ':m >+1<CR>gv=gv', opts)
+keymap('v', '<a-j>', ':m <-2<CR>gv=gv', opts)
