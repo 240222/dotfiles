@@ -30,6 +30,9 @@ keymap('n', '<a-j>', ':m .+1<CR>==', opts)
 keymap('n', '<a-k>', ':m .-2<CR>==', opts)
 
 -- Move text up and down (in visual mode)
--- todo: needs checking
-keymap('v', '<a-j>', ':m >+1<CR>gv=gv', opts)
-keymap('v', '<a-j>', ':m <-2<CR>gv=gv', opts)
+keymap('v', '<a-j>', ":m '>+1<CR>gv=gv", opts)
+keymap('v', '<a-k>', ":m '<-2<CR>gv=gv", opts)
+
+-- Move text up and down (in insert mode)
+keymap('i', '<a-j>', '<ESC>:m .+1<CR>==gi', opts)
+keymap('i', '<a-k>', '<ESC>:m .-2<CR>==gi', opts)
