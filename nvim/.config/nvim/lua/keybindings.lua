@@ -43,3 +43,9 @@ keymap('n', '<c-n>', ':NvimTreeToggle<CR>', opts)
 keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
 keymap('n', '<leader>n', ':NvimTreeFindFile<CR>', opts)
 
+-- Resize windows with arrows
+keymap('n', '<c-up>', ':resize -2<CR>', opts)
+keymap('n', '<c-down>', ':resize +2<CR>', opts)
+keymap('n', '<c-left>', ':vertical resize -2<CR>', opts)
+keymap('n', '<c-right>', ':vertical resize +2<CR>', opts)
+
