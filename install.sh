@@ -18,6 +18,10 @@ sudo apt-get install -y xsel
 # Install prettier, and other npm packages globally for JavaScript development
 sudo npm install -g typescript typescript-language-server eslint_d eslint prettier tree-sitter
 
+# Install the elm language server
+sudo npm install -g @elm-tooling/elm-language-server
+sudo npm install -g elm elm-test elm-format elm-review
+
 # Install the nvim package manager packer nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim

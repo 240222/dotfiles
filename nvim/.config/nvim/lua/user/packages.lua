@@ -27,9 +27,13 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  -- LSP 
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
+  -- Explorer
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -60,7 +64,6 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'}}
     }
-    use 'jose-elias-alvarez/null-ls.nvim'
 -- End Packages --
 
   if packer_bootstrap then
