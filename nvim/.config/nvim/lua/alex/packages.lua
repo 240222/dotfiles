@@ -6,10 +6,24 @@ end
 return require('packer').startup(function(use)
 
 -- Start Plugins --
-  use 'wbthomason/packer.nvim'
-  -- use 'tomasr/molokai'
-  use 'folke/tokyonight.nvim'
-
+use 'wbthomason/packer.nvim'
+use 'folke/tokyonight.nvim'
+use 'Pocco81/TrueZen.nvim'
+use 'numToStr/Comment.nvim'
+use 'kyazdani42/nvim-web-devicons'
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = {'kyazdani42/nvim-web-devicons', opt=true}
+}
+ -- Explorer
+use {
+  'kyazdani42/nvim-tree.lua',
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icon
+  },
+  config = function() require'nvim-tree'.setup {} end
+}
+-- Alpha dashboard
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -23,50 +37,24 @@ return require('packer').startup(function(use)
         }
       end
   }
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+use {
+     'nvim-telescope/telescope.nvim',
+     requires = { {'nvim-lua/plenary.nvim'}}
+}
 
-  -- LSP 
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
-  use 'jose-elias-alvarez/null-ls.nvim'
+use {
+  'nvim-treesitter/nvim-treesitter',
+  run = ':TSUpdate'
+}
 
-  -- Explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
-  }
-
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-    }
-
-    use 'Pocco81/TrueZen.nvim'
-
-    use {
-      'nvim-lualine/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt= true}
-    }
     use 'numToStr/FTerm.nvim'
     use {
       'yamatsum/nvim-nonicons',
       requires = {'kyazdani42/nvim-web-devicons'}
     }
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'}}
-    }
--- End Packages --
+-- End Plugins --
 
-  if packer_bootstrap then
+if packer_bootstrap then
     require('packer').sync()
   end
 end)

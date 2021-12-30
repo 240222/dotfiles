@@ -1,4 +1,3 @@
--- The _ is added to allow direct jumps from the init.lua with gf --
 require'lualine'.setup {
   options = {
     icons_enabled = true,
