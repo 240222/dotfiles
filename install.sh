@@ -22,6 +22,9 @@ sudo npm install -g typescript typescript-language-server eslint_d eslint pretti
 sudo npm install -g @elm-tooling/elm-language-server
 sudo npm install -g elm elm-test elm-format elm-review
 
+# install the vscode json language server
+sudo npm install -g vscode-langservers-extracted
+
 # Install the nvim package manager packer nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -43,8 +46,8 @@ nix-env -iA \
     nixpkgs.yarn \
     nixpkgs.ripgrep \
     nixpkgs.gh \
-    nixpkgs.yt-dlp
-# for yt-dlp in zsh put quotes around the urls
+    nixpkgs.yt-dlp \
+    nixpkgs.sumneko-lua-language-server
 
 # create symlinks to the dotfiles with stow
 stow zsh
