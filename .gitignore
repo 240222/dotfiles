@@ -2,3 +2,4 @@ node_modules/
 package.json
 package-lock.json
 nvim/.config/nvim/plugin/packer_compiled.lua
+get-pip.py
