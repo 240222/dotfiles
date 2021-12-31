@@ -27,6 +27,9 @@ sudo apt-get install -y fd-find
 # Install xsel
 sudo apt-get install -y xsel
 
+# Install Anki
+sudo apt-get install -y anki
+
 # Install prettier, and other npm packages globally for JavaScript development
 sudo npm install -g typescript typescript-language-server eslint_d eslint prettier tree-sitter
 
@@ -92,4 +95,4 @@ chmod u+x nvim.appimage
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
-
+cd
