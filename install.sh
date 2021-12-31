@@ -1,3 +1,15 @@
+sudo apt update
+# Install python2 and python3 for neovim
+sudo apt install python
+sudo apt install curl
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+sudo python2 get-pip.py
+sudo apt install python3 python3-pip
+
+# Install pynvim for the neovim client
+pip2 install pynvim
+pip3 install pynvim
+
 # Install NodeJS current *
 #curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
