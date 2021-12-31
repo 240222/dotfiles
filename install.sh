@@ -76,11 +76,6 @@ sudo chsh -s $(which zsh) $USER
 # bundle zsh plugins
 antibody bundle <~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
-# install kitty since the nixos version has issues
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
-sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
-
 # install fonts
 # sudo apt-get install -y fonts-hack-ttf
 
@@ -92,3 +87,9 @@ mkdir -p ~/.local/bin
 cd ~/.local/bin
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
+
+# install kitty since the nixos version has issues
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+
