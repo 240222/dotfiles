@@ -50,7 +50,6 @@ curl -L https://nixos.org/nix/install | sh
 # Install packages
 nix-env -iA \
     nixpkgs.zsh \
-    nixpkgs.git \
     nixpkgs.antibody \
     nixpkgs.stow \
     nixpkgs.fzf \
@@ -89,6 +88,7 @@ sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x2
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
 # install latest neovim
+mkdir -p ~/.local/bin
 cd ~/.local/bin
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
