@@ -1,10 +1,11 @@
 sudo apt update
 # Install python2 and python3 for neovim
-sudo apt install python
-sudo apt install curl
+sudo apt install -y python
+sudo apt install -y curl
+sudo apt install -y wget
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
-sudo apt install python3 python3-pip
+sudo apt install -y python3 python3-pip
 
 # Install pynvim for the neovim client
 pip2 install pynvim
