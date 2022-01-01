@@ -27,7 +27,7 @@ null_ls.setup({
 		}),
 		formatting.stylua,
 		formatting.elm_format,
-		diagnostics.eslint.with({
+		diagnostics.eslint_d.with({
 			filetypes = {
 				"javascript",
 				"javascriptreact",

@@ -6,6 +6,7 @@ sudo apt install -y wget
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
 sudo apt install -y python3 python3-pip
+# at the end of the script we remove the get-pip.py
 
 # Install pynvim for the neovim client
 pip2 install pynvim
@@ -20,7 +21,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y tree
 
 # Set local LC_ALL to counteract locale issue with perl
-export LC_ALL=C.UTF-8
+#export LC_ALL=C.UTF-8
 
 # Install fd needed for Telescope in neovim
 sudo apt-get install -y fd-find
@@ -100,4 +101,7 @@ chmod u+x nvim.appimage
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
-cd
+
+# Clean install dir
+cd ~/.dotfiles/
+rm ~/.dotfiles/get-pip.py
