@@ -65,7 +65,8 @@ nix-env -iA \
     nixpkgs.sumneko-lua-language-server \
     nixpkgs.stylua \
     nixpkgs.black \
-    nixpkgs.tree-sitter
+    nixpkgs.tree-sitter \
+    nixpkgs.elmPackages.elm-format
 
 # create symlinks to the dotfiles with stow
 stow zsh
