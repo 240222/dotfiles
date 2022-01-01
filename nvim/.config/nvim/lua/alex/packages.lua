@@ -37,6 +37,7 @@ use {
         }
       end
   }
+
 use {
      'nvim-telescope/telescope.nvim',
      requires = { {'nvim-lua/plenary.nvim'}}
@@ -47,11 +48,26 @@ use {
   run = ':TSUpdate'
 }
 
-    use 'numToStr/FTerm.nvim'
-    use {
-      'yamatsum/nvim-nonicons',
-      requires = {'kyazdani42/nvim-web-devicons'}
-    }
+use 'numToStr/FTerm.nvim'
+  use {
+   'yamatsum/nvim-nonicons',
+   requires = {'kyazdani42/nvim-web-devicons'}
+}
+
+-- Autocompletion
+use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+use 'saadparwaiz1/cmp_luasnip'
+
+-- Snippets
+use 'L3MON4D3/LuaSnip'
+use 'rafamadriz/friendly-snippets'
+
+-- LSP 
+
+
 -- End Plugins --
 
 if packer_bootstrap then
