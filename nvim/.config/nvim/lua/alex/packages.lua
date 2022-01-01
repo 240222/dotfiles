@@ -71,7 +71,7 @@ use 'neovim/nvim-lspconfig'
 use 'williamboman/nvim-lsp-installer'
 use 'b0o/SchemaStore.nvim' -- for jsonls in lsp/settings
 use 'ray-x/lsp_signature.nvim'
-
+use 'jose-elias-alvarez/null-ls.nvim'
 -- End Plugins --
 
 if packer_bootstrap then

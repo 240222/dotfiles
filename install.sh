@@ -32,7 +32,7 @@ sudo apt-get install -y xsel
 sudo apt-get install -y anki
 
 # Install prettier, and other npm packages globally for JavaScript development
-sudo npm install -g typescript typescript-language-server eslint_d eslint prettier tree-sitter
+sudo npm install -g typescript typescript-language-server eslint_d eslint prettier
 
 # Install the elm language server
 sudo npm install -g @elm-tooling/elm-language-server
@@ -62,7 +62,10 @@ nix-env -iA \
     nixpkgs.ripgrep \
     nixpkgs.gh \
     nixpkgs.yt-dlp \
-    nixpkgs.sumneko-lua-language-server
+    nixpkgs.sumneko-lua-language-server \
+    nixpkgs.stylua \
+    nixpkgs.black \
+    nixpkgs.tree-sitter
 
 # create symlinks to the dotfiles with stow
 stow zsh
