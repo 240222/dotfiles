@@ -20,6 +20,9 @@ alias vim='~/.local/bin/nvim.appimage'
 alias nvim='~/.local/bin/nvim.appimage'
 alias yt-dlp='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 alias kitty='~/.local/kitty.app/bin/kitty'
+# alias for telegram 
+alias telegram='~/.local/Telegram/Telegram'
+
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 

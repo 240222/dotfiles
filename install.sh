@@ -6,7 +6,8 @@ sudo apt install -y wget
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
 sudo apt install -y python3 python3-pip
-# at the end of the script we remove the get-pip.py
+# remove the obsolete get-pip.py
+rm ~/.dotfiles/get-pip.py
 
 # Install pynvim for the neovim client
 pip2 install pynvim
@@ -88,9 +89,6 @@ antibody bundle <~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 # install fonts
 # sudo apt-get install -y fonts-hack-ttf
 
-# install fonts with support for glyphs
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
-
 # install latest neovim
 mkdir -p ~/.local/bin
 cd ~/.local/bin
@@ -100,8 +98,11 @@ chmod u+x nvim.appimage
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
-sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
-# Clean install dir
-cd ~/.dotfiles/
-rm ~/.dotfiles/get-pip.py
+# install the Hack Nerdfont with support for icons and glyphs
+
+# install flatpak for gnome
+sudo apt install -y flatpak
+sudo apt install -y gnome-software-plugin-flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

@@ -16,7 +16,6 @@ null_ls.setup({
 		formatting.prettier.with({
 			filetypes = {
 				"javascript",
-				"javascriptreact",
 				"css",
 				"html",
 				"json",
@@ -30,7 +29,6 @@ null_ls.setup({
 		diagnostics.eslint_d.with({
 			filetypes = {
 				"javascript",
-				"javascriptreact",
 			},
 		}),
 	},
