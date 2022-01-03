@@ -71,7 +71,8 @@ nix-env -iA \
     nixpkgs.stylua \
     nixpkgs.black \
     nixpkgs.tree-sitter \
-    nixpkgs.elmPackages.elm-format
+    nixpkgs.elmPackages.elm-format \
+    nixpkgs.zk
 
 # create symlinks to the dotfiles with stow
 stow zsh
@@ -110,6 +111,6 @@ curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoj
 fc-cache -f -v
 
 # install flatpak for gnome
-sudo apt install -y flatpak
-sudo apt install -y gnome-software-plugin-flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#sudo apt install -y flatpak
+#sudo apt install -y gnome-software-plugin-flatpak
+#sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
