@@ -83,6 +83,7 @@ return require("packer").startup(function(use)
 
 	-- Buffers
 	use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+        use 'moll/vim-bbye'
 	-- End Plugins --
 
 	if packer_bootstrap then
