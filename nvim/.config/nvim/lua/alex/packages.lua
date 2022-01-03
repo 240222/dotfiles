@@ -89,6 +89,12 @@ return require("packer").startup(function(use)
 		"nvim-lua/plenary.nvim",
 	} })
 
+	-- Project
+	use("ahmedkhalf/project.nvim")
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
+
+	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
+
 	-- End Plugins --
 
 	if packer_bootstrap then
