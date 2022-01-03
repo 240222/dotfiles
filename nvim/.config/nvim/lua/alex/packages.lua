@@ -80,6 +80,9 @@ return require("packer").startup(function(use)
 	use("b0o/SchemaStore.nvim") -- for jsonls in lsp/settings
 	use("ray-x/lsp_signature.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- Buffers
+	use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
 	-- End Plugins --
 
 	if packer_bootstrap then

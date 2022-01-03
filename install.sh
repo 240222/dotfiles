@@ -103,7 +103,11 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
-# install the Hack Nerdfont with support for icons and glyphs
+# install fonts for icons support in neovim
+cd ~/.local/share/fonts/
+curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
+curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
+fc-cache -f -v
 
 # install flatpak for gnome
 sudo apt install -y flatpak
