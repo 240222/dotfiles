@@ -1,7 +1,7 @@
 # dotfiles
 
 # Installation Workflow
-1. Clone the [NerdFond](https://github.com/ryanoasis/nerd-fonts) repo and run `./install.sh FiraCode`. The other 'easier' `sudo apt-get install firacode-fonts` way to install the font doesn't seem to work correctly on debian.
+1. Clone the [NerdFond](https://github.com/ryanoasis/nerd-fonts) repo and run `./install.sh JetBrainsMono`. 
 
 2. Change the `/etc/pam.d/chsh` file as follows:
 `auth sufficient pam_shell.so`
