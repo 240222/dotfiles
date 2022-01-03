@@ -1,4 +1,4 @@
-local null_ls = require('null-ls')
+local null_ls = require("null-ls")
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
@@ -12,7 +12,7 @@ null_ls.setup({
 			filetypes = {
 				"javascript",
 				"typescript",
-                                'javascriptreact',
+				"javascriptreact",
 				"css",
 				"html",
 				"json",
@@ -29,4 +29,9 @@ null_ls.setup({
 			},
 		}),
 	},
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		end
+	end,
 })
