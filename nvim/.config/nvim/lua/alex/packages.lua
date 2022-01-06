@@ -96,6 +96,10 @@ return require("packer").startup(function(use)
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
 
 	use("folke/lsp-colors.nvim")
+
+	-- Markdown preview
+	use("ellisonleao/glow.nvim")
+
 	-- End Plugins --
 
 	if packer_bootstrap then
