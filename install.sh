@@ -109,9 +109,9 @@ cd ~/.local/share/fonts/
 curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
 curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
 curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 fc-cache -f -v
 
-# install flatpak for gnome
-#sudo apt install -y flatpak
-#sudo apt install -y gnome-software-plugin-flatpak
-#sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
