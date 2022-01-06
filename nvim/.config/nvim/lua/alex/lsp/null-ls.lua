@@ -15,7 +15,6 @@ null_ls.setup({
 				"javascriptreact",
 				"css",
 				"html",
-				"json",
 				"yaml",
 				"markdown",
 			},

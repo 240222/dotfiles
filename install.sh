@@ -14,8 +14,8 @@ pip2 install pynvim
 pip3 install pynvim
 
 # Install NodeJS current *
-#curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+# curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sude -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential 
@@ -108,6 +108,7 @@ sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/ki
 cd ~/.local/share/fonts/
 curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
 curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
+curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
 fc-cache -f -v
 
 # install flatpak for gnome
