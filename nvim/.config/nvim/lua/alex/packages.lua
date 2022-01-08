@@ -76,10 +76,12 @@ return require("packer").startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
-	use("williamboman/nvim-lsp-installer")
-	use("b0o/SchemaStore.nvim") -- for jsonls in lsp/settings
-	use("ray-x/lsp_signature.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
+        use("jose-elias-alvarez/null-ls.nvim")
+        use('jose-elias-alvarez/nvim-lsp-ts-utils')
+
+        -- use("williamboman/nvim-lsp-installer")
+	-- use("b0o/SchemaStore.nvim") -- for jsonls in lsp/settings
+	-- use("ray-x/lsp_signature.nvim")
 
 	-- Buffers
 	use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
