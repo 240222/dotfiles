@@ -46,10 +46,13 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+        -- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+
+        use {'nvim-telescope/telescope-file-browser.nvim'}
 
 
 
@@ -97,9 +100,7 @@ return require("packer").startup(function(use)
 	use("ahmedkhalf/project.nvim")
 
         use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
-
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
-
 	use("folke/lsp-colors.nvim")
 
 	-- Markdown preview
