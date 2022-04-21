@@ -29,7 +29,7 @@ nkeymap("gd", ":lua vim.lsp.buf.definition()<cr>")
 nkeymap("gD", ":lua vim.lsp.buf.declaration()<cr>")
 nkeymap("gi", ":lua vim.lsp.buf.implementation()<cr>")
 nkeymap("gw", ":lua vim.lsp.buf.document_symbol()<cr>")
-nkeymap("gw", ":lua vim.lsp.buf.workspace_symbol()<cr>")
+-- nkeymap("gw", ":lua vim.lsp.buf.workspace_symbol()<cr>")
 nkeymap("gr", ":lua vim.lsp.buf.references()<cr>")
 nkeymap("gt", ":lua vim.lsp.buf.type_definition()<cr>")
 nkeymap("K", ":lua vim.lsp.buf.hover()<cr>")
@@ -56,14 +56,15 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
 -- Resize windows with arrows
+-- Todo: replace the up/down/left/right with something else since we dont use arrows on keyboard
 keymap("n", "<c-up>", ":resize -2<CR>", opts)
 keymap("n", "<c-down>", ":resize +2<CR>", opts)
 keymap("n", "<c-left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<c-right>", ":vertical resize +2<CR>", opts)
 
 -- Launch the FTerm
-keymap("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
-keymap("t", "<A-i>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("n", "<A-t>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("t", "<A-t>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
@@ -77,3 +78,7 @@ keymap("n", "<C-p>", ":Telescope projects<cr>", opts)
 -- Telescope File Browser
 keymap("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
+-- How to get into TrueZen mode?
+keymap("n","<leader>ta", ":TZAtaraxis<CR>",opts)
+keymap("n","<leader>tm", ":TZMinimalist<CR>",opts)
+keymap("n","<leader>tf", ":TZFocus<CR>",opts)
