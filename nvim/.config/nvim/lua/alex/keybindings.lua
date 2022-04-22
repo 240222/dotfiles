@@ -78,7 +78,11 @@ keymap("n", "<C-p>", ":Telescope projects<cr>", opts)
 -- Telescope File Browser
 keymap("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
+-- Telescopte Todo
+keymap("n","<leader>td",":TodoTelescope<CR>",opts)
+
 -- How to get into TrueZen mode?
 keymap("n","<leader>ta", ":TZAtaraxis<CR>",opts)
 keymap("n","<leader>tm", ":TZMinimalist<CR>",opts)
 keymap("n","<leader>tf", ":TZFocus<CR>",opts)
+

@@ -1,5 +1,6 @@
 sudo apt update
 # Install python2 and python3 for neovim
+# FIX: Before installing first check if an app exists already
 sudo apt install -y python
 sudo apt install -y curl
 sudo apt install -y wget
@@ -81,7 +82,7 @@ stow nvim
 stow kitty
 
 # add zsh to valid login shells
-# FIXME: Before adding the local zsh to the /etc/shells check if it's already there (sed/gawk?)
+# FIX: Before adding the local zsh to the /etc/shells check if it's already there (sed/gawk?)
 command -v zsh | sudo tee -a /etc/shells
 
 # use zsh as default shells
@@ -102,7 +103,7 @@ chmod u+x nvim.appimage
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
-# FIXME The icon for kitty doesn't show in the gnu desktop.
+# FIX: The icon for kitty doesn't show in the gnu desktop.
 sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
