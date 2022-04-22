@@ -81,7 +81,7 @@ stow nvim
 stow kitty
 
 # add zsh to valid login shells
-# todo: first check if it is already there (maybe sed?)
+# FIXME: Before adding the local zsh to the /etc/shells check if it's already there (sed/gawk?)
 command -v zsh | sudo tee -a /etc/shells
 
 # use zsh as default shells
@@ -102,6 +102,7 @@ chmod u+x nvim.appimage
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+# FIXME The icon for kitty doesn't show in the gnu desktop.
 sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
