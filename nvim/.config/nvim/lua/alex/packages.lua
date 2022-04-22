@@ -103,9 +103,15 @@ return require("packer").startup(function(use)
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
 	use("folke/lsp-colors.nvim")
 
-	-- Markdown preview
+	-- Markdown preview glow, which is not so good
 	use("ellisonleao/glow.nvim")
 
+-- Markdown preview the old version
+  use ({ 
+  'iamcco/markdown-preview.nvim',
+  ft = 'markdown',
+  run = 'cd app && yarn install'
+  })
 	-- End Plugins --
 
 	if packer_bootstrap then

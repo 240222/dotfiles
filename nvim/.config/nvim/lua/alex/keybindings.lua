@@ -18,7 +18,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
 keymap("n", "<S-x>", ":Bdelete<CR>", opts)
 
-keymap("n", "<leader>g", ":Glow<CR>", opts)
+keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
 
 local function nkeymap(key, map)
 	keymap("n", key, map, opts)
