@@ -12,6 +12,7 @@ keymap("n", "<c-h>", "<c-w>h", opts)
 keymap("n", "<c-k>", "<c-w>k", opts)
 keymap("n", "<c-l>", "<c-w>l", opts)
 
+-- #TODO: Check the <S-*> keybindings
 -- Better buffer navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
