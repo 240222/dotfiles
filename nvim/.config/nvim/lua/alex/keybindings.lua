@@ -13,10 +13,10 @@ keymap("n", "<c-k>", "<c-w>k", opts)
 keymap("n", "<c-l>", "<c-w>l", opts)
 
 -- Better buffer navigation
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
-keymap("n", "<S-x>", ":Bdelete<CR>", opts)
+-- keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
+-- keymap("n", "<S-x>", ":Bdelete<CR>", opts)
 
 keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
 

@@ -116,6 +116,15 @@ return require("packer").startup(function(use)
     ft = 'markdown',
     run = 'cd app && yarn install'
   })
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+      }
+    end
+  }
+
   -- End Plugins --
 
   if packer_bootstrap then
