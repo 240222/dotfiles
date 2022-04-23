@@ -22,7 +22,7 @@ keymap("n", "<S-x>", ":Bdelete<CR>", opts)
 keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
 
 local function nkeymap(key, map)
-	keymap("n", key, map, opts)
+  keymap("n", key, map, opts)
 end
 
 -- LSP keybindings
@@ -80,10 +80,9 @@ keymap("n", "<C-p>", ":Telescope projects<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
 -- Telescopte Todo
-keymap("n","<leader>td",":TodoTelescope<CR>",opts)
+keymap("n", "<leader>td", ":TodoTelescope<CR>", opts)
 
 -- How to get into TrueZen mode?
-keymap("n","<leader>ta", ":TZAtaraxis<CR>",opts)
-keymap("n","<leader>tm", ":TZMinimalist<CR>",opts)
-keymap("n","<leader>tf", ":TZFocus<CR>",opts)
-
+keymap("n", "<leader>ta", ":TZAtaraxis<CR>", opts)
+keymap("n", "<leader>tm", ":TZMinimalist<CR>", opts)
+keymap("n", "<leader>tf", ":TZFocus<CR>", opts)

@@ -50,6 +50,9 @@ sudo npm install -g bash-language-server
 # install the docker language server
 sudo npm install -g dockerfile-language-server-nodejs
 
+# install the Node.js provider for neovim
+sudo npm install -g neovim
+
 # Install the nvim package manager packer nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim

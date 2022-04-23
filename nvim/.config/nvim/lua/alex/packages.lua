@@ -79,8 +79,13 @@ return require("packer").startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
 
-  -- Reinstalling LSP 
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+-- Reinstalling LSP 
+use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+
+-- Reinstalling null-ls for autoformatting
+use({"jose-elias-alvarez/null-ls.nvim", requires = {
+"nvim-lua/plenary.nvim",
+  }})
 
 	-- LSP #TODO: remove the dependency of the lsp config of the unmaintained dependency
 	-- use("neovim/nvim-lspconfig")
