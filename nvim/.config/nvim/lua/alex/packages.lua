@@ -125,6 +125,9 @@ return require("packer").startup(function(use)
     end
   }
 
+  -- Automatically create TOC for markdown files
+  use "mzlogin/vim-markdown-toc"
+
   -- End Plugins --
 
   if packer_bootstrap then
