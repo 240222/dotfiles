@@ -1,6 +1,11 @@
-# dotfiles
+# Portable Development Environment
 
-# Installation Workflow
+- kitty
+- nvim
+- js, lua, elm, bash
+- node.js 18
+
+## Installation Workflow
 
 1. Clone the [NerdFond](https://github.com/ryanoasis/nerd-fonts) repo and run `./install.sh JetBrainsMono`.
 
@@ -16,7 +21,6 @@ After the full install a new kitty terminal should open.
 # Post-install Neovim
 
 1. Run `:PackerSync` or `:PackerInstall`. This will install the needed packages.
-2. To activate glow markdown-previewer run `:GlowInstall`.
 
 # Remove Workflow
 
