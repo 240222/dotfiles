@@ -36,3 +36,6 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 export LC_ALL=C.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# opam configuration
+test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

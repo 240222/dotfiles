@@ -113,13 +113,25 @@ cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applicatio
 sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
-cd ~/.local/share/fonts/
-curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
-curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
-curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
-curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-fc-cache -f -v
+# INFO: Only activate for a fresh install
+# cd ~/.local/share/fonts/
+# curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
+# curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
+# curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
+# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+# fc-cache -f -v
+
+# Install OCAML opam package manager
+# curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
+sudo apt-get -y install opam
+opam init
+eval $(opam env)
+opam switch create 4.14.0
+eval $(opam env)
+# which ocaml
+# ocaml -version
+opam install dune utop ocaml-lsp-server
 
