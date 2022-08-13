@@ -23,7 +23,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y tree
 
 # Set local LC_ALL to counteract locale issue with perl
-#export LC_ALL=C.UTF-8
+export LC_ALL=C.UTF-8
 
 # Install fd needed for Telescope in neovim
 sudo apt-get install -y fd-find
@@ -31,15 +31,12 @@ sudo apt-get install -y fd-find
 # Install xsel
 sudo apt-get install -y xsel
 
-# Install Anki
-sudo apt-get install -y anki
-
 # Install prettier, and other npm packages globally for JavaScript development
 sudo npm install -g typescript typescript-language-server eslint_d eslint prettier
 
 # Install the elm language server
-sudo npm install -g @elm-tooling/elm-language-server
-sudo npm install -g elm elm-test elm-format elm-review
+#sudo npm install -g @elm-tooling/elm-language-server
+#sudo npm install -g elm elm-test elm-format elm-review
 
 # install the vscode json language server
 sudo npm install -g vscode-langservers-extracted
@@ -78,7 +75,6 @@ nix-env -iA \
     nixpkgs.stylua \
     nixpkgs.black \
     nixpkgs.tree-sitter \
-    nixpkgs.elmPackages.elm-format \
     nixpkgs.zk
 
 # create symlinks to the dotfiles with stow
@@ -89,7 +85,7 @@ stow kitty
 
 # add zsh to valid login shells
 # FIX: Before adding the local zsh to the /etc/shells check if it's already there (sed/gawk?)
-command -v zsh | sudo tee -a /etc/shells
+#command -v zsh | sudo tee -a /etc/shells
 
 # use zsh as default shells
 sudo chsh -s $(which zsh) $USER
@@ -106,11 +102,17 @@ cd ~/.local/bin
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 
+# install mochi.cards
+cd ~/.local/bin
+curl -LO https://mochi.cards/releases/Mochi-1.14.7.AppImage
+chmod u+x Mochi-1.14.7.AppImage
+ln -s Mochi-1.14.7.AppImage mochi
+
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 # FIX: The icon for kitty doesn't show in the gnu desktop.
-sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+#sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
 # INFO: Only activate for a fresh install
@@ -126,12 +128,11 @@ sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/ki
 
 # Install OCAML opam package manager
 # curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
-sudo apt-get -y install opam
-opam init
-eval $(opam env)
-opam switch create 4.14.0
-eval $(opam env)
+#sudo apt-get -y install opam
+#opam init
+#eval $(opam env)
+#opam switch create 4.14.0
+#eval $(opam env)
 # which ocaml
 # ocaml -version
-opam install dune utop ocaml-lsp-server
-
+#opam install dune utop ocaml-lsp-server

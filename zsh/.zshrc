@@ -23,8 +23,8 @@ alias yt='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 alias ytplaylist='yt-dlp -o "%(playlist_index|)s%(playlist_index& - |)s%(title)s.%(ext)s" BaW_jenozKc'
 alias kitty='~/.local/kitty.app/bin/kitty'
 # alias for telegram 
-alias telegram='~/.local/Telegram/Telegram'
-
+#alias telegram='~/.local/Telegram/Telegram'
+alias mochi='~/.local/bin/mochi'
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 
