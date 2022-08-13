@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=mochi
+GenericName=Mochi Cards
+Comment=Mochi Cards
+TryExec=mochi
+Exec=mochi
+Icon=/home/hacker/.local/share/icon/mochi.png
+Categories=System
+Terminal=false

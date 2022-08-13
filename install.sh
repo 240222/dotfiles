@@ -82,6 +82,8 @@ stow zsh
 stow git
 stow nvim 
 stow kitty
+# create a symlink to the mochi.desktop file
+stow mochi
 
 # add zsh to valid login shells
 # FIX: Before adding the local zsh to the /etc/shells check if it's already there (sed/gawk?)
