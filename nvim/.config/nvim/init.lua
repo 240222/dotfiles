@@ -1,8 +1,8 @@
+require("alex.packages")
 require("alex.lsp")
 require("alex.null-ls")
 -- Above changes while reinstalling the lsp and autoformat
 require("alex.keybindings")
-require("alex.packages")
 require("alex.config")
 require("alex.truezen")
 require("alex.comment")
