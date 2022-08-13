@@ -25,6 +25,9 @@ alias kitty='~/.local/kitty.app/bin/kitty'
 # alias for telegram 
 #alias telegram='~/.local/Telegram/Telegram'
 alias mochi='~/.local/bin/mochi'
+#alias for Boox Note Air 2 scrcpy 
+alias scrcpy='scrcpy -m 800'
+
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 
