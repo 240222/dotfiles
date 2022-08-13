@@ -39,3 +39,5 @@ export LANG=en_US.UTF-8
 
 # opam configuration
 test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+[ -f "/home/putin/.ghcup/env" ] && source "/home/putin/.ghcup/env" # ghcup-env

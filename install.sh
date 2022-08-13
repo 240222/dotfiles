@@ -136,3 +136,6 @@ cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applicatio
 # which ocaml
 # ocaml -version
 #opam install dune utop ocaml-lsp-server
+
+# Install the haskell-language-server for neovim
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
