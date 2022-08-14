@@ -145,4 +145,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # Install wally flashing tool for Ergodox
 cd ~/.local/bin
 curl -LO https://configure.ergodox-ez.com/wally/linux
+mv linux wally
 chmod u+x wally
