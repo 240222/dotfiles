@@ -5,6 +5,6 @@ GenericName=Mochi Cards
 Comment=Mochi Cards
 TryExec=mochi
 Exec=mochi
-Icon=/home/hacker/.local/share/icon/mochi.png
+Icon=org.gnome.clocks
 Categories=System
 Terminal=false

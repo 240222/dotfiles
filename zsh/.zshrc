@@ -27,7 +27,8 @@ alias kitty='~/.local/kitty.app/bin/kitty'
 alias mochi='~/.local/bin/mochi'
 #alias for Boox Note Air 2 scrcpy 
 alias scrcpy='scrcpy -m 800'
-
+# alias for wally
+alias wally='~/.local/bin/wally'
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 

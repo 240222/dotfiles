@@ -141,3 +141,8 @@ cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applicatio
 
 # Install the haskell-language-server for neovim
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+# Install wally flashing tool for Ergodox
+cd ~/.local/bin
+curl -LO https://configure.ergodox-ez.com/wally/linux
+chmod u+x wally
