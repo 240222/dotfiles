@@ -69,7 +69,6 @@ nix-env -iA \
     nixpkgs.bat \
     nixpkgs.yarn \
     nixpkgs.ripgrep \
-    nixpkgs.gh \
     nixpkgs.yt-dlp \
     nixpkgs.sumneko-lua-language-server \
     nixpkgs.stylua \
@@ -113,7 +112,7 @@ ln -s Mochi-1.14.7.AppImage mochi
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
-# FIX: The icon for kitty doesn't show in the gnu desktop.
+# If the icon for kitty doesn't show in the gnu desktop.
 #sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
@@ -141,6 +140,8 @@ cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applicatio
 
 # Install the haskell-language-server for neovim
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+# INFO Install haskell-language-server and haskell-language-server-wrapper
 
 # Install wally flashing tool for Ergodox
 cd ~/.local/bin
