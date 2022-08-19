@@ -148,3 +148,10 @@ cd ~/.local/bin
 curl -LO https://configure.ergodox-ez.com/wally/linux
 mv linux wally
 chmod u+x wally
+
+# Install support for chinese
+sudo apt install -y fonts-arphic-bkai00mp
+sudo apt install -y xfonts-intl-chinese
+sudo apt install -y xfonts-intl-chinese-big
+sudo apt install -y ibus-libpinyin
+# You may need to run sudo dpconfigure locales to add the simplified Chinese locale zh_...UTF8

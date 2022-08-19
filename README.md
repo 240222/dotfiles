@@ -3,6 +3,7 @@
 - zsh (kitty is available)
 - nvim
 - haskell, lua, bash, sql, markdown, yaml
+- support for Chinese (run ibus-setup to set the entry panel)
 
 ## Installation Workflow
 
