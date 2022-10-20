@@ -105,9 +105,9 @@ chmod u+x nvim.appimage
 
 # install mochi.cards
 cd ~/.local/bin
-curl -LO https://mochi.cards/releases/Mochi-1.14.7.AppImage
-chmod u+x Mochi-1.14.7.AppImage
-ln -s Mochi-1.14.7.AppImage mochi
+curl -LO https://mochi.cards/releases/Mochi-1.15.0.AppImage
+chmod u+x Mochi-1.15.0.AppImage
+ln -s Mochi-1.15.0.AppImage mochi
 
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
