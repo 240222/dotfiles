@@ -104,39 +104,40 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 
 # install mochi.cards
+# FIX Check latest Mochi version on mochi.cards
 cd ~/.local/bin
-curl -LO https://mochi.cards/releases/Mochi-1.15.0.AppImage
-chmod u+x Mochi-1.15.0.AppImage
-ln -s Mochi-1.15.0.AppImage mochi
+curl -LO https://mochi.cards/releases/Mochi-1.15.7.AppImage
+chmod u+x Mochi-1.15.7.AppImage
+ln -s Mochi-1.15.7.AppImage mochi
 
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 # If the icon for kitty doesn't show in the gnu desktop.
-#sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+sed -i "s|Icon=kitty|Icon=~/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
 
 # install fonts for icons support in neovim
 # INFO: Only activate for a fresh install
-# cd ~/.local/share/fonts/
-# curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
-# curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
-# curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
-# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-# curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-# fc-cache -f -v
+cd ~/.local/share/fonts/
+curl -LO https://github.com/microsoft/vscode-codicons/raw/main/dist/codicon.ttf
+curl -LO https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf
+curl -LO https://github.com/yamatsum/nonicons/blob/master/dist/nonicons.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+fc-cache -f -v
 
 # Install OCAML opam package manager
-# curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
-#sudo apt-get -y install opam
-#opam init
-#eval $(opam env)
-#opam switch create 4.14.0
-#eval $(opam env)
-# which ocaml
-# ocaml -version
-#opam install dune utop ocaml-lsp-server
+curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
+sudo apt-get -y install opam
+opam init
+eval $(opam env)
+opam switch create 4.14.0
+eval $(opam env)
+which ocaml
+ocaml -version
+opam install dune utop ocaml-lsp-server
 
 # Install the haskell-language-server for neovim
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
@@ -154,4 +155,12 @@ sudo apt install -y fonts-arphic-bkai00mp
 sudo apt install -y xfonts-intl-chinese
 sudo apt install -y xfonts-intl-chinese-big
 sudo apt install -y ibus-libpinyin
-# You may need to run sudo dpconfigure locales to add the simplified Chinese locale zh_...UTF8
+# You may need to run sudo dpkg-reconfigure locales to add the simplified Chinese locale zh_...UTF8
+# Install app for Boox e-ink Mira screen
+cd ~/.local/bin
+curl -LO https://static.send2boox.com/monitor-pc/linux/Mira-latest.AppImage
+chmod u+x Mira-latest.AppImage
+ln -s Mira-latest.AppImage mira
+
+# Install scrcpy to mirror Boox Note Air 2 screen
+sudo apt install -y scrcpy
