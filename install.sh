@@ -139,6 +139,9 @@ which ocaml
 ocaml -version
 opam install dune utop ocaml-lsp-server
 
+# Install the haskell stack
+wget -qO- https://get.haskellstack.org/ | sh
+stack upgrade
 # Install the haskell-language-server for neovim
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
@@ -163,4 +166,4 @@ chmod u+x Mira-latest.AppImage
 ln -s Mira-latest.AppImage mira
 
 # Install scrcpy to mirror Boox Note Air 2 screen
-sudo apt install -y scrcpy
+

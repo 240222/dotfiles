@@ -29,3 +29,16 @@ Note: Only works for one user on a debian machine, since nix can't easily handle
 # Remove Workflow
 
 If you want to remove an errorneous install, use the `./cleanup.sh` script. This script not just removes the .local and .config and all dotfiles, but also the /nix directory.
+
+# Haskell
+
+[## Use stack to create and manage haskell projects](https://anvilproject.org/guides/content/creating-links)
+
+`stack new my-project`
+`cd my-project`
+`stack build`
+`stack exec my-project-exe`
+
+## Haskell repl
+
+`stack repl`
