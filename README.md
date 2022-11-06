@@ -34,10 +34,7 @@ If you want to remove an errorneous install, use the `./cleanup.sh` script. This
 
 [## Use stack to create and manage haskell projects](https://anvilproject.org/guides/content/creating-links)
 
-`stack new my-project`
-`cd my-project`
-`stack build`
-`stack exec my-project-exe`
+1.`stack new my-project` 2.`cd my-project` 3.`stack build` 4.`stack exec my-project-exe`
 
 ## Haskell repl
 

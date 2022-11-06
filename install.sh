@@ -142,6 +142,8 @@ opam install dune utop ocaml-lsp-server
 # Install the haskell stack
 wget -qO- https://get.haskellstack.org/ | sh
 stack upgrade
+# Install ghcup to manage the haskell toolkit
+curl --proto 'https://' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # Install the haskell-language-server for neovim
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
