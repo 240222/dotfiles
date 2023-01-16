@@ -106,9 +106,9 @@ chmod u+x nvim.appimage
 # install mochi.cards
 # FIX Check latest Mochi version on mochi.cards
 cd ~/.local/bin
-curl -LO https://mochi.cards/releases/Mochi-1.15.7.AppImage
-chmod u+x Mochi-1.15.7.AppImage
-ln -s Mochi-1.15.7.AppImage mochi
+curl -LO https://mochi.cards/releases/Mochi-1.15.15.AppImage
+chmod u+x Mochi-1.15.15.AppImage
+ln -s Mochi-1.15.15.AppImage mochi
 
 # install kitty since the nixos version has issues
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
@@ -170,3 +170,5 @@ ln -s Mira-latest.AppImage mira
 
 # Install scrcpy to mirror Boox Note Air 2 screen
 
+# Install the rust development environment
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
