@@ -39,3 +39,13 @@ If you want to remove an errorneous install, use the `./cleanup.sh` script. This
 ## Haskell repl
 
 `stack repl`
+
+## Manage Haskell Toolkit
+
+`ghcup tui1
+
+# Russian
+
+Change the keyboard to ANSI.
+
+# Chinese

@@ -161,6 +161,7 @@ sudo apt install -y xfonts-intl-chinese
 sudo apt install -y xfonts-intl-chinese-big
 sudo apt install -y ibus-libpinyin
 # You may need to run sudo dpkg-reconfigure locales to add the simplified Chinese locale zh_...UTF8
+
 # Install app for Boox e-ink Mira screen
 cd ~/.local/bin
 curl -LO https://static.send2boox.com/monitor-pc/linux/Mira-latest.AppImage

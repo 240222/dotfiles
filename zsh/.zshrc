@@ -44,8 +44,10 @@ export LANG=en_US.UTF-8
 # opam configuration
 test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-[ -f "/home/putin/.ghcup/env" ] && source "/home/putin/.ghcup/env" # ghcup-env
+#[ -f "/home/putin/.ghcup/env" ] && source "/home/putin/.ghcup/env" # ghcup-env
 
 # Change the color temperature of the HDMI-A-0 (xrandr --listproviders)
 # Use the gamma colors on http://www.vendian.org/mncharity/dir3/blackbody/UnstableURLs/bbr_color.html 
-xrandr --output HDMI-A-0 --gamma 1.0:0.5860:0.2974 --brightness 0.75
+# xrandr --output HDMI-A-0 --gamma 1.0:0.5860:0.2974 --brightness 0.75
+
+[ -f "/home/alex/.ghcup/env" ] && source "/home/alex/.ghcup/env" # ghcup-env
