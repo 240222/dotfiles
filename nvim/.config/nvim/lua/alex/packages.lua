@@ -122,6 +122,9 @@ return require("packer").startup(function(use)
 	-- Automatically create TOC for markdown files
 	use("mzlogin/vim-markdown-toc")
 
+  -- Rust specific
+  use("simrat39/rust-tools.nvim")
+
 	-- End Plugins --
 
 	if packer_bootstrap then

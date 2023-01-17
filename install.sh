@@ -170,5 +170,11 @@ ln -s Mira-latest.AppImage mira
 
 # Install scrcpy to mirror Boox Note Air 2 screen
 
+# Install the rust-analyzer
+cd ~/.local/bin
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+chmod u+x rust-analyzer
+
+
 # Install the rust development environment
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
