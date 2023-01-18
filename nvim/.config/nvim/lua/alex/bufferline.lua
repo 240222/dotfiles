@@ -1,5 +1,5 @@
 require("bufferline").setup({
-	options = {
+      options = {
 		numbers = "both",
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"

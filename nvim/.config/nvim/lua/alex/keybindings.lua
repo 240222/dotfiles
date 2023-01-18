@@ -63,13 +63,13 @@ keymap("n", "<c-left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<c-right>", ":vertical resize +2<CR>", opts)
 
 -- Launch the FTerm
-keymap("n", "<A-t>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
-keymap("t", "<A-t>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("n", "<c-t>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("t", "<c-t>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
 keymap("n", "<leader>fg", '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts)
-keymap("n", "<leader>fb", '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
+keymap("n", "<leader>bb", '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
 keymap("n", "<leader>fh", '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
 
 -- Project
@@ -85,3 +85,8 @@ keymap("n", "<leader>td", ":TodoTelescope<CR>", opts)
 keymap("n", "<leader>ta", ":TZAtaraxis<CR>", opts)
 keymap("n", "<leader>tm", ":TZMinimalist<CR>", opts)
 keymap("n", "<leader>tf", ":TZFocus<CR>", opts)
+
+-- TODO: add shortcuts for call vimspector#ToggleBreakpoint/#AddWatch/#Evaluate
+keymap("n", "Dd", ":call vimspector#ToggleBreakpoint()<cr>", opts)
+keymap("n", "Dw", ":call vimspector#AddWatch()<cr>", opts)
+keymap("n", "De", ":call vimspector#Evaluate()<cr>", opts)

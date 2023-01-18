@@ -21,7 +21,11 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 	})
 
-	use("folke/tokyonight.nvim")
+	-- use("folke/tokyonight.nvim")
+        use {
+            "phha/zenburn.nvim",
+            config = function() require("zenburn").setup() end
+            }
 	use("Pocco81/TrueZen.nvim")
 	use("numToStr/Comment.nvim")
 	use("kyazdani42/nvim-web-devicons")
@@ -80,10 +84,10 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
-
-	-- Snippets
-	use("L3MON4D3/LuaSnip")
-	use("rafamadriz/friendly-snippets")
+        use("hrsh7th/cmp-nvim-lsp-signature-help")
+        use("hrsh7th/cmp-nvim-lua")
+        use("hrsh7th/cmp-vsnip")
+        use("hrsh7th/vim-vsnip")
 
 	-- Reinstalling null-ls for autoformatting
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = {
@@ -124,6 +128,9 @@ return require("packer").startup(function(use)
 
   -- Rust specific
   use("simrat39/rust-tools.nvim")
+
+  -- Rust debugging
+ use ('puremourning/vimspector')
 
 	-- End Plugins --
 
