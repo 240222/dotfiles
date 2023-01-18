@@ -49,5 +49,7 @@ test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init
 # Change the color temperature of the HDMI-A-0 (xrandr --listproviders)
 # Use the gamma colors on http://www.vendian.org/mncharity/dir3/blackbody/UnstableURLs/bbr_color.html 
 # xrandr --output HDMI-A-0 --gamma 1.0:0.5860:0.2974 --brightness 0.75
-
 [ -f "/home/alex/.ghcup/env" ] && source "/home/alex/.ghcup/env" # ghcup-env
+
+# add support for easier cd path to rust and other directories
+export cdpath=(~/.dotfiles ~/rust ~/.local/bin ~/.dotfiles/nvim/.config/nvim/)

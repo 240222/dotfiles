@@ -63,8 +63,8 @@ keymap("n", "<c-left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<c-right>", ":vertical resize +2<CR>", opts)
 
 -- Launch the FTerm
-keymap("n", "<c-t>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
-keymap("t", "<c-t>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("n", "<A-t>", '<CMD>lua require("FTerm").toggle()<CR>', opts)
+keymap("t", "<A-t>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
