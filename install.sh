@@ -178,3 +178,6 @@ chmod u+x rust-analyzer
 
 # Install the rust development environment
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install lldb for dap in neovim
+sudo apt install -y lldb

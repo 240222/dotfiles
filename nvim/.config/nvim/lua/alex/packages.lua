@@ -126,11 +126,14 @@ return require("packer").startup(function(use)
 	-- Automatically create TOC for markdown files
 	use("mzlogin/vim-markdown-toc")
 
-  -- Rust specific
-  use("simrat39/rust-tools.nvim")
-
-  -- Rust debugging
- use ('puremourning/vimspector')
+        -- Nvim-dap
+        use 'mfussenegger/nvim-dap'
+        use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+        use 'theHamsta/nvim-dap-virtual-text'
+        use 'nvim-telescope/telescope-dap.nvim'
+        
+        -- Rust specific use
+        use("simrat39/rust-tools.nvim")
 
 	-- End Plugins --
 
