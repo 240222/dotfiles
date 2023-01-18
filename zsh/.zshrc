@@ -52,4 +52,5 @@ test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init
 [ -f "/home/alex/.ghcup/env" ] && source "/home/alex/.ghcup/env" # ghcup-env
 
 # add support for easier cd path to rust and other directories
-export cdpath=(~/.dotfiles ~/rust ~/.local/bin ~/.dotfiles/nvim/.config/nvim/)
+setopt auto_cd
+export cdpath=($HOME/.dotfiles $HOME/rust $HOME/.local/bin $HOME/.dotfiles/nvim/.config/nvim/lua/alex)
