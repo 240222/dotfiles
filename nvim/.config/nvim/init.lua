@@ -1,5 +1,7 @@
 require("alex.packages")
 require("alex.opts")
+require("alex.treesitter")
 require("alex.mason-lsp")
 require("alex.nvim-dap")
 require("alex.rust-tools")
+require("alex.telescope")
