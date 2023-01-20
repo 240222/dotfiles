@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
           -- or                          , branch = '0.1.x',
           requires = { {'nvim-lua/plenary.nvim'} }
         }
+        use {'nvim-telescope/telescope-dap.nvim'}
         use({
           'nvim-treesitter/nvim-treesitter', 
           run = ':TSUpdate',
@@ -35,6 +36,8 @@ return require("packer").startup(function(use)
 
         -- Debugging
         use 'mfussenegger/nvim-dap'
+        use {'theHamsta/nvim-dap-virtual-text'}
+        use {'rcarriga/nvim-dap-ui'}
 
         -- Themes 
 
