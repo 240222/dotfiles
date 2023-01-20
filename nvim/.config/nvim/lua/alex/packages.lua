@@ -21,11 +21,16 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 	})
 
-	-- use("folke/tokyonight.nvim")
+        -- Themes 
+	use("folke/tokyonight.nvim")
         use {
             "phha/zenburn.nvim",
             config = function() require("zenburn").setup() end
             }
+        use("bluz71/vim-nightfly-colors")
+        use { "ellisonleao/gruvbox.nvim" }
+        use { "catppuccin/nvim", as = "catppuccin" }
+
 	use("Pocco81/TrueZen.nvim")
 	use("numToStr/Comment.nvim")
 	use("kyazdani42/nvim-web-devicons")

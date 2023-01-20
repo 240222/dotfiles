@@ -84,12 +84,15 @@ keymap("n", "<leader>tm", ":TZMinimalist<CR>", opts)
 keymap("n", "<leader>tf", ":TZFocus<CR>", opts)
 
 -- Debugging keymaps
-keymap("n", "<F5>", ":lua require'dap'.continue()<cr>", opts)
-keymap("n", "<F10>", ":lua require'dap'.step_over()<cr>", opts) -- debug over
-keymap("n", "<F11>", ":lua require'dap'.step_out()<cr>", opts) -- debug exit
+keymap("n", "<leader>c", ":lua require'dap'.continue()<cr>", opts)
+keymap("n", "<leader>o", ":lua require'dap'.step_over()<cr>", opts) -- debug over
+keymap("n", "<leader>e", ":lua require'dap'.step_out()<cr>", opts) -- debug exit
 keymap("n", "<leader>tb", ":lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>b", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", opts)
-keymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", opts)
-keymap("n", "<leader>dr", ":lua require'dap'.repl.open()<cr>", opts)
+keymap("n", "<leader>bc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", opts)
+keymap("n", "<leader>sb", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", opts)
+keymap("n", "<leader>re", ":lua require'dap'.repl.open()<cr>", opts)
 keymap("n", "<a-o>", ":lua require'dapui'.open()<cr>", opts)
 keymap("n", "<a-c>", ":lua require'dapui'.close()<cr>", opts)
+
+-- Themes
+
