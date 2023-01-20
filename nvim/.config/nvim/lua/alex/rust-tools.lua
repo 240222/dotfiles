@@ -1,10 +1,12 @@
-local rt = require("rust-tools")
+local codelldb_path = "/home/alex/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb"
+local liblldb_path =  "/home/alex/.local/share/nvim/mason/packages/codelldb/extension/lldb/lib/liblldb.so"
 
-rt.setup({
-  server = {
-    on_attach = function(_, bufnr)
-      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-    end,
-  },
-})
+local opts = {
+  -- debugging stuff
+  dap = {
+    adapter = require('rust-tools.dap').get_codelldb_adapter(codelldb_path,liblldb_path)
+
+    }
+  }
+
+require('rust-tools').setup(opts)

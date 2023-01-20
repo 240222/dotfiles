@@ -181,3 +181,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install lldb for dap in neovim
 sudo apt install -y lldb
+
+# Graphviz for neovim rust debug
+sudo apt install -y graphviz
+
+# Install codelldb for neovim dap debug for rust
+cd ~/.local
+git clone https://github.com/vadimcn/vscode-lldb.git

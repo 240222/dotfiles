@@ -29,6 +29,8 @@ alias mochi='~/.local/bin/mochi'
 alias scrcpy='scrcpy -m 800'
 # alias for wally
 alias wally='~/.local/bin/wally'
+# alias for lldb-vscode for neovim rust debug
+alias lldb-vscode=/usr/lib/llvm-14/bin/lldb-vscode
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 

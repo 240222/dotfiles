@@ -15,130 +15,36 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- LSP
-	use({
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	})
+        use 'williamboman/mason.nvim'
+        use 'williamboman/mason-lspconfig.nvim'
+        use 'neovim/nvim-lspconfig'
+        use 'simrat39/rust-tools.nvim'
+
+        -- Optional dependencies
+        use 'nvim-lua/popup.nvim'
+        use 'nvim-lua/plenary.nvim'
+        use 'nvim-telescope/telescope.nvim'
+      
+        -- Debugging
+        use 'mfussenegger/nvim-dap'
 
         -- Themes 
-	use("folke/tokyonight.nvim")
-        use {
-            "phha/zenburn.nvim",
-            config = function() require("zenburn").setup() end
-            }
-        use("bluz71/vim-nightfly-colors")
-        use { "ellisonleao/gruvbox.nvim" }
-        use { "catppuccin/nvim", as = "catppuccin" }
 
-	use("Pocco81/TrueZen.nvim")
-	use("numToStr/Comment.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
 	-- Explorer
-	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = {
-			"kyazdani42/nvim-web-devicons", -- optional, for file icon
-		},
-		config = function()
-			require("nvim-tree").setup({})
-		end,
-	})
+
 	-- Alpha dashboard
-	use({
-		"goolord/alpha-nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").opts)
-			local startify = require("alpha.themes.startify")
-			startify.section.bottom_buttons.val = {
-				startify.button("e", "new file", ":ene <bar> startinsert<cr>"),
-				startify.button("v", "nvim config", ":e ~/.config/nvim/init.lua<cr>"),
-				startify.button("q", "quit nvim", ":qa<cr>"),
-			}
-		end,
-	})
 
 	-- Telescope
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
 
-	use({ "nvim-telescope/telescope-file-browser.nvim" })
-
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
-
-	use("numToStr/FTerm.nvim")
-	use({
-		"yamatsum/nvim-nonicons",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
-
-	-- Autocompletion
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("saadparwaiz1/cmp_luasnip")
-	use("hrsh7th/cmp-nvim-lsp")
-        use("hrsh7th/cmp-nvim-lsp-signature-help")
-        use("hrsh7th/cmp-nvim-lua")
-        use("hrsh7th/cmp-vsnip")
-        use("hrsh7th/vim-vsnip")
-
-	-- Reinstalling null-ls for autoformatting
-	use({ "jose-elias-alvarez/null-ls.nvim", requires = {
-		"nvim-lua/plenary.nvim",
-	} })
+	-- Null-ls 
 
 	-- Buffers
-	use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
-	use("moll/vim-bbye")
-
-	use({ "lewis6991/gitsigns.nvim", requires = {
-		"nvim-lua/plenary.nvim",
-	} })
 
 	-- Project
-	use("ahmedkhalf/project.nvim")
 
-	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
-	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
-	use("folke/lsp-colors.nvim")
-
-	-- Markdown preview the old version
-	use({
-		"iamcco/markdown-preview.nvim",
-		ft = "markdown",
-		run = "cd app && yarn install",
-	})
-
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({})
-		end,
-	})
+	-- Markdown
 
 	-- Automatically create TOC for markdown files
-	use("mzlogin/vim-markdown-toc")
-
-        -- Nvim-dap
-        use 'mfussenegger/nvim-dap'
-        use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-        use 'theHamsta/nvim-dap-virtual-text'
-        use 'nvim-telescope/telescope-dap.nvim'
-        
-        -- Rust specific use
-        use("simrat39/rust-tools.nvim")
 
 	-- End Plugins --
 
