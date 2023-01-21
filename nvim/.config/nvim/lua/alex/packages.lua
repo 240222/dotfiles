@@ -20,6 +20,9 @@ return require("packer").startup(function(use)
         use 'neovim/nvim-lspconfig'
         use 'simrat39/rust-tools.nvim'
 
+        -- Formatting 
+        use "lukas-reineke/lsp-format.nvim"
+
         -- Optional dependencies
         use 'nvim-lua/popup.nvim'
         use 'nvim-lua/plenary.nvim'
