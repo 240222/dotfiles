@@ -7,4 +7,5 @@ require("alex.rust-tools")
 require("alex.telescope")
 require("alex.nvim-dap-virtual-text")
 require("alex.nvim-dap-ui")
-
+require("alex.zenburn")
+require("alex.nvim-comment")
