@@ -7,7 +7,7 @@ require("null-ls").setup({
 		formatting.stylua,
 	},
 	on_attach = function(client, bufnr)
-		if client.name == "rust_analyzer" then
+		if client.name == "rust_analyzer" then -- you can add more by adding or
 			client.resolved_capabilities.document_formatting = false
 		end
 
