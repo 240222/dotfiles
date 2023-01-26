@@ -45,7 +45,16 @@ return require("packer").startup(function(use)
 
 	-- Themes
 	use({ "phha/zenburn.nvim" })
-
+	use({
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 	-- Explorer
 	use({
 		"nvim-tree/nvim-tree.lua",
@@ -63,8 +72,22 @@ return require("packer").startup(function(use)
 
 	-- Buffers
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	use("moll/vim-bbye")
 	-- Project
 	use("ahmedkhalf/project.nvim")
+
+	-- Todo
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
 	-- Markdown
 

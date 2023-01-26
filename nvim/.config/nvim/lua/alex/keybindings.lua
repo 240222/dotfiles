@@ -25,8 +25,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
 keymap("n", "<S-x>", ":Bdelete<CR>", opts)
 
-keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
-
 local function nkeymap(key, map)
 	keymap("n", key, map, opts)
 end
@@ -88,7 +86,9 @@ keymap("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.
 -- Telescopte Todo
 keymap("n", "<leader>td", ":TodoTelescope<CR>", opts)
 
+-- How to get into ZenMode?
+keymap("n", "<A-z>", ":ZenMode<cr>", opts)
 -- How to get into TrueZen mode?
-keymap("n", "<leader>ta", ":TZAtaraxis<CR>", opts)
-keymap("n", "<leader>tm", ":TZMinimalist<CR>", opts)
-keymap("n", "<leader>tf", ":TZFocus<CR>", opts)
+-- keymap("n", "<leader>ta", ":TZAtaraxis<CR>", opts)
+-- keymap("n", "<leader>tm", ":TZMinimalist<CR>", opts)
+-- keymap("n", "<leader>tf", ":TZFocus<CR>", opts)
