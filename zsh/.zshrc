@@ -30,7 +30,7 @@ alias scrcpy='scrcpy -m 800'
 # alias for wally
 alias wally='~/.local/bin/wally'
 # alias for lldb-vscode for neovim rust debug
-alias lldb-vscode=/usr/lib/llvm-14/bin/lldb-vscode
+# alias lldb-vscode=/usr/lib/llvm-14/bin/lldb-vscode
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 
@@ -55,4 +55,4 @@ test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init
 
 # add support for easier cd path to rust and other directories
 setopt auto_cd
-export cdpath=($HOME/rust $HOME/.dotfiles/nvim/.config/nvim/lua/alex $HOME/.local/bin)
+export cdpath=($HOME/rust $HOME/.dotfiles/nvim/.config/ $HOME/.local/bin)
