@@ -3,8 +3,7 @@
 Optimized for Debian bookworm, with support for Boox Mira and Boox Note Air 2.
 
 - zsh (kitty is available, but being downgraded)
-- nvim
-- haskell, lua, bash, sql, markdown, yaml, ocaml
+- nvim optimized for Rust
 - support for Chinese (run ibus-setup to set the entry panel)
 
 ## Installation Workflow
@@ -24,28 +23,18 @@ Note: Only works for one user on a debian machine, since nix can't easily handle
 
 # Post-install Neovim
 
+Although it should auto-run and auto-install. If it doesn't ... 
+
 1. Run `:PackerSync` or `:PackerInstall`. This will install the needed packages.
 
 # Remove Workflow
 
 If you want to remove an errorneous install, use the `./cleanup.sh` script. This script not just removes the .local and .config and all dotfiles, but also the /nix directory.
 
-# Haskell
-
-[## Use stack to create and manage haskell projects](https://anvilproject.org/guides/content/creating-links)
-
-1.`stack new my-project` 2.`cd my-project` 3.`stack build` 4.`stack exec my-project-exe`
-
-## Haskell repl
-
-`stack repl`
-
-## Manage Haskell Toolkit
-
-`ghcup tui1
-
 # Russian
 
 Change the keyboard to ANSI.
 
 # Chinese
+
+<!-- TODO: explain how to type chinese -->

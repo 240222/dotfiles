@@ -31,6 +31,7 @@ alias scrcpy='scrcpy -m 800'
 alias wally='~/.local/bin/wally'
 # alias for lldb-vscode for neovim rust debug
 # alias lldb-vscode=/usr/lib/llvm-14/bin/lldb-vscode
+alias codelldb='~/.local/share/nvim/mason/bin/codelldb'
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi 

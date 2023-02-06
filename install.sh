@@ -18,7 +18,7 @@ pip3 install pynvim
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 # curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sude -E bash -
-sudo apt-get install -y nodejs
+# sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential 
 sudo apt-get install -y tree
 
@@ -31,24 +31,11 @@ sudo apt-get install -y fd-find
 # Install xsel
 sudo apt-get install -y xsel
 
-# Install prettier, and other npm packages globally for JavaScript development
-sudo npm install -g typescript typescript-language-server eslint_d eslint prettier
-
-# Install the elm language server
-#sudo npm install -g @elm-tooling/elm-language-server
-#sudo npm install -g elm elm-test elm-format elm-review
-
 # install the vscode json language server
 sudo npm install -g vscode-langservers-extracted
 
 # install the bash language server
 sudo npm install -g bash-language-server
-
-# install the docker language server
-sudo npm install -g dockerfile-language-server-nodejs
-
-# install the Node.js provider for neovim
-sudo npm install -g neovim
 
 # Install the nvim package manager packer nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -129,23 +116,23 @@ curl -LO https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF
 fc-cache -f -v
 
 # Install OCAML opam package manager
-curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
-sudo apt-get -y install opam
-opam init
-eval $(opam env)
-opam switch create 4.14.0
-eval $(opam env)
-which ocaml
-ocaml -version
-opam install dune utop ocaml-lsp-server
+# curl -fsSL https://raw.githubusercontent.com/ocaml/master/shell/install.sh
+# sudo apt-get -y install opam
+# opam init
+# eval $(opam env)
+# opam switch create 4.14.0
+# eval $(opam env)
+# which ocaml
+# ocaml -version
+# opam install dune utop ocaml-lsp-server
 
 # Install the haskell stack
-wget -qO- https://get.haskellstack.org/ | sh
-stack upgrade
-# Install ghcup to manage the haskell toolkit
-curl --proto 'https://' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-# Install the haskell-language-server for neovim
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+# wget -qO- https://get.haskellstack.org/ | sh
+# stack upgrade
+# # Install ghcup to manage the haskell toolkit
+# curl --proto 'https://' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+# # Install the haskell-language-server for neovim
+# curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
 # INFO Install haskell-language-server and haskell-language-server-wrapper
 
@@ -181,10 +168,3 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install lldb for dap in neovim
 sudo apt install -y lldb
-
-# Graphviz for neovim rust debug
-sudo apt install -y graphviz
-
-# Install codelldb for neovim dap debug for rust
-cd ~/.local
-git clone https://github.com/vadimcn/vscode-lldb.git

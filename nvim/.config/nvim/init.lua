@@ -61,13 +61,23 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
   -- Nvim Tree File Explorer
-use {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional, for file icons
-  },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
-}
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  -- Rust-tools
+  use 'simrat39/rust-tools.nvim'
+
+  -- Debugging
+  use 'nvim-lua/plenary.nvim'
+  use 'mfussenegger/nvim-dap'
+
+  -- Bufferline for showing buffertabs
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -350,9 +360,10 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {
+    cmd = { "rustup", "run", "stable", "rust-analyzer" },
     -- enable clippy on save,
     checkOnSave = {
-      command = "clippy"
+      command = true
     },
   },
   sumneko_lua = {
@@ -436,7 +447,7 @@ cmp.setup {
   },
 }
 
--- Nvim-Tree config 
+-- Nvim-Tree config
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -455,8 +466,60 @@ require("nvim-tree").setup({
   },
 })
 -- Nvim-Tree keybinding
-vim.keymap.set("n","<C-n>", ":NvimTreeToggle<CR>")
-
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Rust-tools
+vim.keymap.set("n", "<leader>r", ":RustRun<CR>")
+
+
+require("rust-tools").setup({
+  -- rust-tools options
+  tools = {
+    autoSetHints = true,
+    inlay_hints = {
+      show_parameter_hints = true,
+      parameter_hints_prefix = "<- ",
+      other_hints_prefix = "=> "
+    }
+  },
+  server = {
+    on_attach = on_attach,
+    settings = {
+      ["rust-analyzer"] = {
+        assist = {
+          importEnforceGranularity = true,
+          importPrefix = "create"
+        },
+        cargo = { allFeatures = true },
+        checkOnSave = {
+          -- default: `cargo check`
+          command = "clippy",
+          allFeatures = true
+        }
+      },
+    },
+  }
+})
+--- Nvim-dap
+--   local dap = require('dap')
+--   dap.adapters.codelldb = {
+--   type = 'server',
+--   port = "${port}",
+--   executable = {
+--     -- CHANGE THIS to your path!
+--     command = '/home/alex/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb',
+--     args = {"--port", "${port}"},
+--
+--     -- On windows you may have to uncomment this:
+--     -- detached = false,
+--   }
+-- }
+
+-- Setup Bufferline
+require("bufferline").setup {}
+
+--- Autogroup
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
