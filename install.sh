@@ -168,3 +168,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install lldb for dap in neovim
 sudo apt install -y lldb
+
+# Install vapigen for installation of libadwaita
+sudo apt install -y valac
+
+# Install libadwaita
+# sudo apt install libadwaita-1-dev

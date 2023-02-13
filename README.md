@@ -38,3 +38,7 @@ Change the keyboard to ANSI.
 # Chinese
 
 <!-- TODO: explain how to type chinese -->
+
+# Build libadwaita from source
+
+`git clone https://gitlab.gnome.org/GNOME/libadwaita.git`
