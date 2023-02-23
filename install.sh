@@ -56,7 +56,6 @@ nix-env -iA \
     nixpkgs.bat \
     nixpkgs.yarn \
     nixpkgs.ripgrep \
-    nixpkgs.yt-dlp \
     nixpkgs.sumneko-lua-language-server \
     nixpkgs.stylua \
     nixpkgs.black \
