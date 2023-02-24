@@ -3,8 +3,8 @@ return {
   tag = 'v0.0.7',
   config = function()
     require('github-theme').setup({
-      -- theme_style = 'light',
-      theme_style = 'dark',
+      theme_style = 'light',
+      -- theme_style = 'dark',
     })
   end
 }
