@@ -21,6 +21,7 @@ alias nvim='~/.local/bin/nvim.appimage'
 alias yt='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 # alias yt-dlp='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
 alias ytplaylist='yt-dlp -o "%(playlist_index|)s%(playlist_index& - |)s%(title)s.%(ext)s" BaW_jenozKc'
+alias ytplaylistsound='yt-dlp -f "ba" -x --audio-format mp3 -o "%(playlist_index|)s%(playlist_index& -|)s%(title)s.%(ext)s" BaW_jenozKc'
 alias kitty='~/.local/kitty.app/bin/kitty'
 # alias for telegram 
 #alias telegram='~/.local/Telegram/Telegram'
