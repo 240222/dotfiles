@@ -173,3 +173,7 @@ sudo apt install -y valac
 
 # Install libadwaita
 # sudo apt install libadwaita-1-dev
+# Install yt-dlp 
+cd ~/.local/bin
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
+cmod u+x yt-dlp
