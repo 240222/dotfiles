@@ -45,9 +45,8 @@ export LC_ALL=C.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# opam configuration
-test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
+# opam configuration disabled used to be needed for Haskell
+# test -r /home/alex/.opam/opam-init/init.zsh && . /home/alex/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 #[ -f "/home/putin/.ghcup/env" ] && source "/home/putin/.ghcup/env" # ghcup-env
 
 # Change the color temperature of the HDMI-A-0 (xrandr --listproviders)
