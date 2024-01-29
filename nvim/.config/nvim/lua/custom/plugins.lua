@@ -57,12 +57,15 @@ local plugins = {
 
   {
     "mfussenegger/nvim-dap",
+    config = function()
+      require "custom.configs.dap"
+    end,
   },
 
   {
     "rcarriga/nvim-dap-ui",
     config = function()
-      require "custom.configs.dap"
+      require("dapui").setup()
     end,
   },
 
