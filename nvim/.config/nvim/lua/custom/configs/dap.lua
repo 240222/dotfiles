@@ -2,6 +2,16 @@ local dap = require("dap")
 local dapui = require("dapui")
 
 -- local mason_registry = require("mason-registry")
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+
 --
 -- local codelldb = mason_registry.get_package("codelldb")
 -- local extension_path = codelldb:get_install_path() .. "/extension"
@@ -36,12 +46,3 @@ local dapui = require("dapui")
 --   },
 -- }
 --
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end

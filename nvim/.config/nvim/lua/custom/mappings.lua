@@ -24,7 +24,7 @@ M.dap = {
   n = {
     ["<leader>dt"] = {
       ":DapToggleBreakpoint<CR>",
-      "toggle dap breakpoint",
+      "Toggle Dap Breakpoint",
       opts = { nowait = true },
     },
     ["<leader>dc"] = {
