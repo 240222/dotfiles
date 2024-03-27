@@ -83,6 +83,8 @@ local plugins = {
     end,
   },
 
+  { "nvim-neotest/nvim-nio"},
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
