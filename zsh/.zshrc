@@ -57,3 +57,9 @@ export LANG=en_US.UTF-8
 # add support for easier cd path to rust and other directories
 setopt auto_cd
 export cdpath=($HOME/rust $HOME/.dotfiles/nvim/.config/ $HOME/.local/bin)
+
+# setting up environment variables for esp32
+source $HOME/export-esp.sh
+
+# add /dev/ttyACM1 as espflash destination
+export ESPFLASH_PORT=”/dev/ttyACM1”
