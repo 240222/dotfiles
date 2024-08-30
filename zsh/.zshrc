@@ -18,9 +18,13 @@ alias ls='ls -al'
 alias vim='~/.local/bin/nvim.appimage'
 # alias vi='~/.local/bin/nvim.appimage'
 alias nvim='~/.local/bin/nvim.appimage'
-alias yt='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
+
 # alias yt-dlp='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]"'
-alias ytplaylist='yt-dlp -o "%(playlist_index|)s%(playlist_index& - |)s%(title)s.%(ext)s" BaW_jenozKc'
+alias yt='yt-dlp --proxy "socks5://localhost:9150"'
+# -f "bv[ext=mp4]+ba[ext=m4a]"
+  
+# alias yt='yt-dlp --proxy "socks5://localhost:9150" -f "bv*[ext=mp4]+ba[ext=m4a]"'
+alias ytplaylist='yt-dlp --proxy "socks5:://localhost:9150" -o "%(playlist_index|)s%(playlist_index& - |)s%(title)s.%(ext)s"'
 alias ytplaylistsound='yt-dlp -f "ba" -x --audio-format mp3 -o "%(playlist_index|)s%(playlist_index& -|)s%(title)s.%(ext)s" BaW_jenozKc'
 alias kitty='~/.local/kitty.app/bin/kitty'
 # alias for telegram 
