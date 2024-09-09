@@ -13,6 +13,16 @@ return {
     end,
   },
 
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
+
+  -- Support for nvimdap
+  { "mfussenegger/nvim-dap" },
+  { "nvim-neotest/nvim-nio" },
+  { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
