@@ -110,22 +110,22 @@ return {
 		"vimwiki/vimwiki",
 	},
 
-  {
-    "zbirenbaum/copilot.lua",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup(require("configs.copilot"))
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup(require("configs.copilot"))
+  --   end,
+  -- },
 
-	{
-		"leoluz/nvim-dap-go",
-		ft = "go",
-		dependencies = "mfussenegger/nvim-dap",
-		config = function(_, opts)
-			require("dap-go").setup(opts)
-		end,
-	},
+	-- {
+	-- 	"leoluz/nvim-dap-go",
+	-- 	ft = "go",
+	-- 	dependencies = "mfussenegger/nvim-dap",
+	-- 	config = function(_, opts)
+	-- 		require("dap-go").setup(opts)
+	-- 	end,
+	-- },
 
 	-- To make a plugin not be loaded
 	-- {

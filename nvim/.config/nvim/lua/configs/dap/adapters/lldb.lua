@@ -2,7 +2,9 @@ local M = {}
 
 M.adapter = {
 	type = "executable",
-	command = "/usr/bin/lldb-vscode",
+  -- local installation of lldb-vscode
+  command = "/usr/lib/llvm-14/bin/lldb-vscode",
+	-- command = "/usr/bin/lldb-vscode",
 	name = "lldb",
 }
 
