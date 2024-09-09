@@ -73,19 +73,23 @@ return {
 		end,
 	},
 
+
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
 			require("configs.dap")
 		end,
+    requires = {"nvim-neotest/nvim-nio"},
 	},
+
+{ "nvim-neotest/nvim-nio" },
 
 	{
 		"rcarriga/nvim-dap-ui",
 		config = function()
 			require("dapui").setup()
 		end,
-		requires = { "mfussenegger/nvim-dap" },
+		requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
 	},
 
 	{
