@@ -38,4 +38,3 @@ end)
 
 -- Added by Alex for customization
 require "configs.autocommands"
-require "configs.dap"
