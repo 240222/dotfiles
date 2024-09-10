@@ -37,4 +37,5 @@ vim.schedule(function()
 end)
 
 -- Added by Alex for customization
-require "alex_autocommands"
+require "configs.autocommands"
+require "configs.dap"
