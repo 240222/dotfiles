@@ -7,6 +7,9 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+-- Nvim Dapui
+map("n", "<A-o>", "<CMD>lua require'dapui'.open()<CR>", { desc = "Open Dapui" })
+map("n", "<A-w>", "<CMD>lua require'dapui'.close()<CR>", { desc = "Close Dapui" })
 -- Nvim Dap for Rust
 map("n", "<Leader>di", "<CMD>lua require'dap'.step_into()<CR>", { desc = "DAP step into" })
 map("n", "<Leader>do", "<CMD>lua require'dap'.step_over()<CR>", { desc = "DAP step over" })
