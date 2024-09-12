@@ -184,6 +184,18 @@ cd /tmp
 wget https://github.com/rr-debugger/rr/releases/download/5.8.0/rr-5.8.0-Linux-$(uname -m).deb
 sudo dpkg -i rr-5.8.0-Linux-$(uname -m).deb
 
-# Install gdb for replay debugging gdb
+# Install open-ocd with support for the JTAG of ESP32 
 #
+# needed for make of openocd for esp32
+sudo apt install -y libusb-1.0-0-dev
+cd /tmp
+git clone https://github.com/espressif/openocd-esp32.git openocd-esp32
+cd openocd-esp32
+./bootstrap
+./configure
+make
+sudo make install
+sudo cp /tmp/openocd-32/contrib/60-openocd.rules /etc/udev/rules.d/
 
+# Install gdb
+sudo apt install -y gdb
