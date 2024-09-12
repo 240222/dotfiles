@@ -177,3 +177,13 @@ sudo apt install -y valac
 cd ~/.local/bin
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
 cmod u+x yt-dlp
+
+# Install rr 
+#
+cd /tmp
+wget https://github.com/rr-debugger/rr/releases/download/5.8.0/rr-5.8.0-Linux-$(uname -m).deb
+sudo dpkg -i rr-5.8.0-Linux-$(uname -m).deb
+
+# Install gdb for replay debugging gdb
+#
+
